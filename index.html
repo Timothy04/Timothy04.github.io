@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="dependecy-tree">
+        <div v-for="node in nodes" 
+        class="node-box" 
+        v-bind:class="{ milestone: node.milestone == true }"
+        v-bind:style="{ top: node.top + 'px', left: node.left + 'px' }">
+            {{ node.title }} 
+        </div>
+
+        <svg width="1000" height="1000">
+            <line v-for="line in lines"
+            v-bind:x1="line.fromX"
+            v-bind:y1="line.fromY"
+            v-bind:x2="line.toX"
+            v-bind:y2="line.toY"
+            stroke="blue"/>
+        </svg>
+    </div>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>

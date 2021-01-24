@@ -1,0 +1,16 @@
+.node-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 120px;
+    height: 70px;
+    margin: 5px;
+    padding: 0xp;
+}
+
+.milestone {
+    border: 1px solid green;
+    color: green;
+}
